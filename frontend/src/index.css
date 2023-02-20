@@ -1,0 +1,243 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.cart-item {
+    display: inline-flex;
+    margin: 20px 10px;
+}
+
+.cart-item .right-block {
+    padding: 20px;
+}
+
+.cart-item-action {
+    margin-top: 20px;
+}
+
+.action-icon {
+    height: 25px;
+    width: 25px;
+    margin-right: 10px;
+}
+
+.action-icon:hover {
+    cursor: pointer;
+}
+
+.class-item {
+    height: 400px;
+    width: 350px;
+}
+
+.class-item-upper {
+    background-color: rgb(204, 133, 2);
+    width: 350px;
+    height: 180px;
+}
+
+.cart {
+    background-image: "https://gstatic.com/classroom/themes/img_backtoschool.jpg&quot";
+    display: flex;
+    flex-direction: column;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.bd {
+    background-repeat: no-repeat;
+    background-repeat: repeat-y;
+    background-size: 100%;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: 24s linear 0s infinite sun-rise;
+}
+
+
+/* @keyframes sun-rise {
+  0% {
+      /* pushes the sun down past the viewport 
+      background-image: url("loginimage1.jpg");
+  }
+  25% {
+      /* returns the sun to its default position 
+      background-image: url("loginimage2.jpg");
+  }
+  50% {
+      background-image: url("loginimage4.jpg");
+  }
+  75% {
+
+      background-image: url("loginimage3.jpg");
+  }
+  100%{
+    background-image: url("loginimage4.jpg");
+  }
+} */
+
+.main {
+    display: flex;
+    height: 50vh;
+    width: 28vw;
+    justify-content: center;
+    background-color: rgb(156, 188, 250);
+    border-radius: 0.5rem;
+    border: 0.2rem solid black;
+}
+
+.text {
+    font-size: 2.5vw;
+}
+
+.textboxid {
+    height: 4vh;
+    width: 25vw;
+    font-size: 2vh;
+    border-radius: 1em;
+}
+
+.ep {
+    display: flex;
+    flex-wrap: wrap;
+    height: 20vh;
+    width: 20vw;
+}
+
+.block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.text2 {
+    font-size: 1.0vw;
+    display: flex;
+    justify-content: center;
+}
+
+
+/* #but {
+  position: relative;
+  left: 10vw;
+} */
+
+.button-9 {
+    height: 1em;
+    appearance: button;
+    backface-visibility: hidden;
+    background-color: #405cf5;
+    border-radius: 1.2em;
+    border-width: 0;
+    box-shadow: rgba(50, 50, 93, .1) 0 0 0 0.0625rem inset, rgba(50, 50, 93, .1) 0 0.125rem 0.31rem 0, rgba(0, 0, 0, .07) 0 0.0625rem 0.0625rem 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    font-family: -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Ubuntu, sans-serif;
+    font-size: 100%;
+    height: 2.75rem;
+    line-height: 1.15;
+    margin: 0.75rem 0 0;
+    padding: 0 1.56rem;
+    position: relative;
+    text-align: center;
+    transition: all .2s, box-shadow .008s ease-in;
+    touch-action: manipulation;
+    width: 100%;
+    left: 10vw;
+}
+
+.button-9:disabled {
+    cursor: default;
+}
+
+.button-9:focus {
+    box-shadow: rgba(50, 50, 93, 1) 0 0 0 1px inset, rgba(50, 50, 93, .2) 0 6px 15px 0, rgba(0, 0, 0, .1) 0 2px 2px 0, rgba(50, 151, 211, .3) 0 0 0 4px;
+}
+
+.form-signup {
+    margin: 0 auto;
+    max-width: 400px;
+}
+
+.register-body {
+    padding-top: 120px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.sidebarsetup {
+    width: auto;
+    height: 100vh;
+}
+
+.sidebar {
+    height: 100%;
+    width: 220px;
+    background-color: #fc8019;
+}
+
+.sidebarlist {
+    padding: 0;
+    width: 100%;
+    height: auto;
+}
+
+.sidebarlist .listrow {
+    width: 100%;
+    height: 60px;
+    /* border: 1pt solid black; */
+    margin: 0%;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 400;
+    font-size: larger;
+}
+
+.sidebarlist .listrow:hover {
+    cursor: pointer;
+    background-color: rgb(24, 29, 29);
+}
+
+.listrow #icon {
+    flex: 30%;
+    display: grid;
+    place-items: center;
+}
+
+.listrow #title {
+    flex: 70%;
+}
+
+.titlebar {
+    width: 100%;
+    background-color: #2040f5;
+}
+
+.titlebar .h1 {
+    padding-left: 2rem;
+    color: white;
+}
+
+.sidebar a {
+    text-decoration: none;
+}
