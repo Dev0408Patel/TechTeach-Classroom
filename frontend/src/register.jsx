@@ -1,8 +1,13 @@
 import React,{Component} from 'react';
+// import {useHistory} from 'react-router-dom';
 import { setState, useState } from 'react';
-import axios from "axios";
+import { useNavigate } from 'react-router-dom';
+
+
+// import axios from "axios";
 function Register()
 {
+    const navigate = useNavigate();
     const[user,setUser]=useState({  name:"" ,email:"", password:"", cpassword:"",work:"",phone:"" });
 
     let name,value;
@@ -10,7 +15,6 @@ function Register()
         name=e.target.name;
         value=e.target.value;
         setUser({...user,[name]:value});
-        // console.log(user);
          console.log(user);
     }
 
@@ -27,7 +31,7 @@ function Register()
                 name,email,phone,work,password,cpassword
             })
         });
-        console.log(res);
+        // console.log(res);
         const data = await res.json();
         console.log(data);
         if(data.status === 422 || !data)
@@ -37,6 +41,7 @@ function Register()
         else
         {
             window.alert("registration done");
+            navigate('/login');
         }
     }
 

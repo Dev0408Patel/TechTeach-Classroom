@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import Login2 from './Login2';
 import Register from './register';
+import { BrowserRouter as Router,Route,Routes } from 'react-router-dom';
 import './App.css';
 
 function App() {
@@ -8,7 +9,14 @@ function App() {
     <div>
 
         {/* <Login2/> */}
-        <Register/>
+        {/* <Register/> */}
+        <Router>
+          <Routes>
+          <Route exact path='/' element={<Register/>}></Route>
+
+            <Route exact path='/login' element={<Login2/>}></Route>
+          </Routes>
+        </Router>
     </div>
   );
 }
