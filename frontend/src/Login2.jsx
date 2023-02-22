@@ -1,8 +1,47 @@
 import React,{Component} from 'react';
-class Register extends Component
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+
+function Login2()
 {
-    render()
-    {
+    const navigate = useNavigate();
+    const[user,setUser]=useState({  email:"", password:""});
+
+    let name,value;
+    const  handleInput= (e) =>    {
+        name=e.target.name;
+        value=e.target.value;
+        setUser({...user,[name]:value});
+        console.log(user);
+    }
+
+    const sendData =async (e)=>{
+        e.preventDefault();
+        const {email,password} = user;
+        
+        const res = await fetch('/signin',{
+            method:"POST",
+            headers: {
+                "Content-Type":"application/json"
+            },
+            body: JSON.stringify({
+                email,password
+            })
+        });
+        const data = await res.json();
+        // console.log(data);
+        if(res.status === 422 || !data)
+        {
+            window.alert("Login unSuccessful");
+            navigate('/login');
+        }
+        else
+        {
+            window.alert("Login Successful");
+            navigate('/home');
+        }
+    }
+
         return (
             // <div className="segment">
             <div className='register-body'>
@@ -14,12 +53,12 @@ class Register extends Component
                     
                     <div className='form-group m-2'>
                             <div className='row'>
-                                <input className='form-control' type="email" name="emailid" placeholder='Email Address' /><hr />
+                                <input className='form-control' type="email" name="email" value={user.email} onChange={handleInput} placeholder='Email Address' />
                             </div>
                     </div>
                     <div className='form-group m-2'>
                         <div className='row'>
-                                <input className='form-control' type="password" name='password' placeholder='Password'/><hr />
+                                <input className='form-control' type="password" name='password' value={user.password} onChange={handleInput} placeholder='Password'/>
                         </div>
                     </div>
                     
@@ -27,7 +66,7 @@ class Register extends Component
                     <div className="form-group m-2">
                         
                         <div className='row'>
-                            <input class="btn btn-success btn-block"type="submit" value="Login" />
+                            <input class="btn btn-success btn-block"type="submit" value="Login" onClick={sendData}/>
                         </div>
                         
                     </div>
@@ -39,7 +78,7 @@ class Register extends Component
             </div>
             // </div>
         );
-    }
+    
 }
 
-export default Register;
+export default Login2;

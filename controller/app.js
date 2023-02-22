@@ -16,6 +16,7 @@ require('./db/conn.js');
 app.use(express.json());
 const user = require('./models/userSchema');
 app.use(require('./router/auth'));
+app.use(require('./router/home'));
 const middleware = (req, res, next) => {
     console.log("this is a middleware");
     next(); // next is used to pass from this middleware if not used then it will stuck in this function and wont go ahead...

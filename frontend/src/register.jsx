@@ -31,12 +31,13 @@ function Register()
                 name,email,phone,work,password,cpassword
             })
         });
-        // console.log(res);
+        // console.log(await res.json());
         const data = await res.json();
-        console.log(data);
-        if(data.status === 422 || !data)
+        console.log(res.status);
+        if(res.status == 422 || !data)
         {
             window.alert("invalid registration");
+            navigate('/');
         }
         else
         {
