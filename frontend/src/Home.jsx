@@ -1,13 +1,13 @@
 import React,{useEffect} from 'react';
-import { setState, useState } from 'react';
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function Home()
 {
-    // const {name,email,phone,work,password,cpassword} = user;
-    // const[user,setUser]=useState({  name:"" ,email:"", password:"", cpassword:"",work:"",phone:"" });
-    // let user;
+    const [userdata,setuserdata]=useState({});
+    const navigate = useNavigate();
     const takeData = async ()=>{
-        // const {name,email,phone,work,password,cpassword} = user;
+        
         try {
             const res = await fetch('/home',{
                 method : "GET",
@@ -17,11 +17,15 @@ function Home()
                 },
                 credentials:"include"
             });
-            // user=res;
-            // console.log(user);
-        // console.log(await res.json());
+            // if(!res.status == 200)
+            // {
+            //     throw new Error("Error occured");
+            //     navigate('/login');
+            // }
             const data = await res.json();
-            // console.log(data);
+            setuserdata(data);
+            
+            // console.log("this is "+userdata);
         }
         catch(err)
         {
@@ -36,7 +40,7 @@ function Home()
             // <div className="segment">
             
             <div className='register-body'>
-                <h1>Welcome to the home page Mr.</h1>
+                <h1>Welcome to the home page Mr.{userdata.name} with the email id {userdata.email}.</h1>
             </div>
             // </div>
         );
