@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import Login2 from './Login2';
 import Home from './Home';
+import Profile from './Profile';
 import Register from './register';
 import { BrowserRouter as Router,Route,Routes } from 'react-router-dom';
 import './App.css';
@@ -15,7 +16,7 @@ function App() {
           <Routes>
           <Route exact path='/' element={<Register/>}></Route>
           <Route exact path='/login' element={<Login2/>}></Route>
-          <Route exact path='/home' element={<Home/>}></Route>
+          <Route exact path='/home' element={<Profile/>}></Route>
         </Routes>
         </Router>
     </div>

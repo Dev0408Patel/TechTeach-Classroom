@@ -23,7 +23,13 @@ function Home()
             //     navigate('/login');
             // }
             const data = await res.json();
+            if(!data)
+            {
+                navigate('/login');
+            }
             setuserdata(data);
+            
+            // console.log(data);
             
             // console.log("this is "+userdata);
         }

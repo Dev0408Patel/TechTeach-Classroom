@@ -17,9 +17,9 @@ const authenticate = async(req, res, next) => {
     console.log(req.cookies.login);
     const isThere = jwt.verify(req.cookies.login, JWT_KEY);
     console.log(isThere);
-    console.log(isThere.payload);
+    // console.log(isThere.payload);
     const rootuser = await users.findOne({ _id: isThere.payload });
-    console.log(rootuser);
+    // console.log(rootuser);
     if (!rootuser) {
         throw new Error("user not found");
     }
