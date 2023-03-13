@@ -1,10 +1,12 @@
 import { Component } from "react";
+import React, { useState, useEffect } from 'react';
 import './profile.css';
  class Profile extends Component{
 
     render()
     {
         return (
+          // <h1>Yagnik</h1>
           <div>
           <div className="profilebody ">
           <div class="row gutters-sm">

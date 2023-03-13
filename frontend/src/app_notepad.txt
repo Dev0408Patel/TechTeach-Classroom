@@ -1,6 +1,9 @@
 
 import './App.css';
-
+import CartItem from './CartItem';
+import ClassItem from './ClassItem';
+import Cart from './Cart';
+import Login from './Login';
 import Register from './register';
 import ClassCard from './ClassCard';
 import Sidebar from './sidebar';

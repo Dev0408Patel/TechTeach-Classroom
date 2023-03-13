@@ -42,7 +42,7 @@ function Register()
         else
         {
             window.alert("registration done");
-            navigate('/login');
+            navigate('/editprofile');
         }
     }
 
@@ -58,32 +58,32 @@ function Register()
                     <p className='text-center'>Create Your Account</p>
                     <div className='form-group m-2'>
                         <div className='row'>
-                            <input className='form-control' type="text" value={user.name} name="name" onChange={handleInput} placeholder="Full Name"></input>
+                            <input className='form-control' style={{width:'95%'}} type="text" value={user.name} name="name" onChange={handleInput} placeholder="Full Name"></input>
                         </div>
                     </div>
                     <div className='form-group m-2'>
                             <div className='row'>
-                                <input className='form-control' type="email" name="email" value={user.email} onChange={handleInput} placeholder='Email Address' />
+                                <input className='form-control' style={{width:'95%'}} type="email" name="email" value={user.email} onChange={handleInput} placeholder='Email Address' />
                             </div>
                     </div>
                     <div className='form-group m-2'>
                         <div className='row'>
-                            <input className='form-control' type="text" value={user.phone} name="phone" onChange={handleInput} placeholder="Phone no."></input>
+                            <input className='form-control' style={{width:'95%'}} type="text" value={user.phone} name="phone" onChange={handleInput} placeholder="Phone no."></input>
                         </div>
                     </div>
                     <div className='form-group m-2'>
                         <div className='row'>
-                            <input className='form-control' type="text" value={user.work} name="work" onChange={handleInput} placeholder="Profession"></input>
+                            <input className='form-control' style={{width:'95%'}} type="text" value={user.work} name="work" onChange={handleInput} placeholder="Profession"></input>
                         </div>
                     </div>
                     <div className='form-group m-2'>
                         <div className='row'>
-                                <input className='form-control' type="password" name='password' value={user.password} onChange={handleInput} placeholder='Password'/>
+                                <input className='form-control' style={{width:'95%'}} type="password" name='password' value={user.password} onChange={handleInput} placeholder='Password'/>
                         </div>
                     </div>
                     <div className="form-group m-2">
                         <div className="row">
-                                <input className='form-control' type="password" name="cpassword" value={user.cpassword} onChange={handleInput} placeholder='Confirm Password' />
+                                <input className='form-control' style={{width:'95%'}} type="password" name="cpassword" value={user.cpassword} onChange={handleInput} placeholder='Confirm Password' />
                         </div>
                     </div>
                     
@@ -98,7 +98,7 @@ function Register()
                     <div className="form-group m-2">
                         
                         <div className='row'>
-                            <input className="btn btn-success btn-block"type="submit" value="Submit" onClick={sendData}/>
+                            <input className="btn btn-success btn-block" style={{width:'95%'}} type="submit" value="Submit" onClick={sendData}/>
                         </div>
                         
                     </div>

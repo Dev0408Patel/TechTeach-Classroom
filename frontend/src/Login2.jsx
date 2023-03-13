@@ -38,7 +38,7 @@ function Login2()
         else
         {
             window.alert("Login Successful");
-            navigate('/home');
+            navigate('/profile');
         }
     }
 
@@ -53,12 +53,12 @@ function Login2()
                     
                     <div className='form-group m-2'>
                             <div className='row'>
-                                <input className='form-control' type="email" name="email" value={user.email} onChange={handleInput} placeholder='Email Address' />
+                                <input className='form-control' style={{width:'95%'}} type="email" name="email" value={user.email} onChange={handleInput} placeholder='Email Address' />
                             </div>
                     </div>
                     <div className='form-group m-2'>
                         <div className='row'>
-                                <input className='form-control' type="password" name='password' value={user.password} onChange={handleInput} placeholder='Password'/>
+                                <input className='form-control' style={{width:'95%'}} type="password" name='password' value={user.password} onChange={handleInput} placeholder='Password'/>
                         </div>
                     </div>
                     
@@ -66,7 +66,7 @@ function Login2()
                     <div className="form-group m-2">
                         
                         <div className='row'>
-                            <input class="btn btn-success btn-block"type="submit" value="Login" onClick={sendData}/>
+                            <input class="btn btn-success btn-block" style={{width:'95%'}} type="submit" value="Login" onClick={sendData}/>
                         </div>
                         
                     </div>

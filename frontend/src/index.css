@@ -66,27 +66,25 @@ code {
     animation: 24s linear 0s infinite sun-rise;
 }
 
-
-/* @keyframes sun-rise {
-  0% {
-      /* pushes the sun down past the viewport 
-      background-image: url("loginimage1.jpg");
-  }
-  25% {
-      /* returns the sun to its default position 
-      background-image: url("loginimage2.jpg");
-  }
-  50% {
-      background-image: url("loginimage4.jpg");
-  }
-  75% {
-
-      background-image: url("loginimage3.jpg");
-  }
-  100%{
-    background-image: url("loginimage4.jpg");
-  }
-} */
+@keyframes sun-rise {
+    0% {
+        /* pushes the sun down past the viewport */
+        background-image: url("loginimage1.jpg");
+    }
+    25% {
+        /* returns the sun to its default position */
+        background-image: url("loginimage2.jpg");
+    }
+    50% {
+        background-image: url("loginimage4.jpg");
+    }
+    75% {
+        background-image: url("loginimage3.jpg");
+    }
+    100% {
+        background-image: url("loginimage4.jpg");
+    }
+}
 
 .main {
     display: flex;
@@ -240,4 +238,9 @@ code {
 
 .sidebar a {
     text-decoration: none;
+}
+
+.form-editprofile {
+    margin: 0 auto;
+    max-width: 800px;
 }
